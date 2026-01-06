@@ -43,47 +43,30 @@ Core deliverables
 - README.md — this file
 - (Optional) requirements.txt — small set of dependencies for running notebooks locally
 
----
+Installation & Execution
+------------------------
+### Prerequisites
+- Python 3.8+
+- Jupyter (or JupyterLab), NumPy, Matplotlib
 
-## ⚙️ SECTION 5: Installation & Execution
+### Conceptual prerequisites (math)
+- High school–level algebra
+- Basic understanding of functions (for example: f(x), input → output)
+- No prior machine learning knowledge is required — this repository builds ML concepts from first principles
 
-### 5.1 Prerequisites
-- Python 3.8+ recommended
-- Jupyter (or JupyterLab) for interactive exploration
-- NumPy and Matplotlib for numerical work and plotting
-
-### 5.2 Environment setup (recommended)
+### Quick setup & run
 ```bash
-# 1. Clone the repository
 git clone https://github.com/vinay-2006/ml-math-foundations.git
 cd ml-math-foundations
-
-# 2. Create & activate virtual environment
 python3 -m venv venv
-# macOS / Linux
 source venv/bin/activate
-# Windows (PowerShell)
-.\venv\Scripts\Activate.ps1
-
-# 3. Install dependencies (if provided)
-pip install -r requirements.txt
-# If no requirements.txt:
-pip install jupyter numpy matplotlib
-```
-
-### 5.3 Run notebooks
-```bash
-# Start Jupyter in the repo root and open notebooks in order
+pip install -r requirements.txt        # if provided
 jupyter notebook
-# or
-jupyter lab
 ```
 Open and run notebooks sequentially (Day 01 → Day 07). Each notebook is designed to build on the previous.
 
----
-
-## 🚀 SECTION 6: Example Showcase — Gradient Descent Visualizer (Day 07)
-
+Gradient Descent Visualizer (Day 07)
+-----------------------------------
 The visualizer demonstrates optimization dynamics and learning-rate experiments:
 - Tracks parameter trajectories on low-dimensional loss surfaces
 - Compares multiple learning rates to reveal convergence vs divergence
@@ -99,16 +82,25 @@ graph TD
   E --> F(Output: interactive plots / saved png)
 ```
 
+A plot or GIF showing gradient descent trajectories on a loss surface should appear here when running the visualizer in the notebook or via the script. This visualization helps compare trajectories and loss curves produced by different learning rates.
+
+> Image/GIF placeholder: Gradient descent trajectories on a loss surface (generated via visuals/gradient_descent_visualizer.py)
+
 Quick demo (run in notebook)
 ```python
 from visuals.gradient_descent_visualizer import run_lr_experiment
 run_lr_experiment(learning_rates=[0.001, 0.01, 0.1], initial_params=[-2.0, 1.0])
 ```
 
----
+Example Showcase — Gradient Descent Visualizer (Day 07)
+-------------------------------------------------------
+The visualizer demonstrates optimization dynamics and learning-rate experiments:
+- Tracks parameter trajectories on low-dimensional loss surfaces
+- Compares multiple learning rates to reveal convergence vs divergence
+- Reports engineered stop conditions (max iterations, stagnation, divergence thresholds)
 
-## 📚 SECTION 7: Repository Architecture
-
+Repository Architecture
+-----------------------
 | Path | Category | Purpose | Status |
 |---|---|---|---|
 | notebooks/ | Educational Notebooks | Seven concept-scoped Jupyter notebooks, sequenced | Complete (7) |
@@ -121,10 +113,6 @@ Testing
 This repository focuses on educational artifacts and currently does not include a formal test suite. Suggested checks:
 - Run notebooks top-to-bottom to ensure cells execute without shape or type errors.
 - Add small unit tests for the optimization engine (example: convergence on convex quadratic).
-- Recommended command pattern once tests are added:
-```bash
-python -m unittest discover -s tests
-```
 
 Notes & best practices
 ----------------------
@@ -132,6 +120,12 @@ Notes & best practices
 - Keep one core concept per notebook to maintain reviewability.
 - Visualizations are designed for intuition, not production plotting APIs.
 - Data used in notebooks is synthetic and generated at runtime; no external datasets required.
+
+Next Step — ML From Scratch (Phase 2, Week B)
+---------------------------------------------
+This repository provides the mathematical prerequisite for Phase 2, Week B. The next repository implements Linear Regression and Logistic Regression from scratch using NumPy and demonstrates end-to-end training loops that consume the concepts developed here.
+
+Direct link: https://github.com/vinay-2006/ml-from-scratch
 
 License
 -------
