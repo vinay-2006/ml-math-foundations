@@ -121,7 +121,7 @@ Notes & best practices
 - Visualizations are designed for intuition, not production plotting APIs.
 - Data used in notebooks is synthetic and generated at runtime; no external datasets required.
 
-Next Step — ML From Scratch (Phase 2, Week B)
+Next Step — ML From Scratch 
 ---------------------------------------------
 This repository provides the mathematical prerequisite for Phase 2, Week B. The next repository implements Linear Regression and Logistic Regression from scratch using NumPy and demonstrates end-to-end training loops that consume the concepts developed here.
 
