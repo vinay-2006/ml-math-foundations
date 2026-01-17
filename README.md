@@ -1,4 +1,4 @@
-# 🧠 ML Math Foundations — Phase 2, Week A
+# 🧠 ML Math Foundations 
 
 ![Notebooks](https://img.shields.io/badge/Artifacts-7%20Notebooks-blue)
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
@@ -11,18 +11,11 @@ This repository is a rigor-first, from-scratch exploration of the mathematics th
 
 Execution summary
 -----------------
-- Scope: Phase 2 — Week A (7 consecutive concept notebooks)
+- Scope: 7 consecutive concept notebooks
 - Artifacts: 7 mathematically-focused Jupyter notebooks + 1 decoupled optimization engine + visualizer
 - Duration (suggested): Read sequentially — one notebook per day to preserve dependency ordering
 - Engineering focus: numerical stability, vectorized implementations, shape-safety checks, and visualization-driven intuition
 
-Why this matters
-----------------
-Understanding the math behind learning systems reduces brittle, trial-and-error engineering. This repo teaches:
-- How data lives in vector spaces and how geometry affects predictions.
-- How learning signals (derivatives/gradients) arise and propagate.
-- How loss surfaces and curvature influence convergence and failure modes.
-- How to implement shape-safe, numerically stable primitives you can reuse in later "From Scratch" projects.
 
 Notebook gallery (7 days)
 -------------------------
